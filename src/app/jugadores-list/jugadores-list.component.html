@@ -1,0 +1,16 @@
+<h2>Players</h2>
+
+<div *ngFor="let play of players; index as id">
+    <h3>
+        <a [title] ="'Detalles de jugador ' + play.name"
+        [routerLink]="['/players', id]"
+        >
+                {{play.name}}
+        </a>
+    </h3>
+    <p *ngIf="play.description">
+        Descripcion: {{play.description}}
+    </p>
+    <img src="{{play.img}}" alt="" srcset="">
+</div>
+
